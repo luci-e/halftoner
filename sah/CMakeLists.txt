@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( sah )
+find_package( OpenCV REQUIRED )
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR} ${OpenCV_INCLUDE_DIRS})
+add_executable( sah sah.cpp Ostromoukhov.cpp SAHalftoner.cpp SSIM.cpp)
+target_link_libraries( sah ${OpenCV_LIBS} )
